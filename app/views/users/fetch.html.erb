@@ -1,0 +1,40 @@
+<a href="/loans/new" class="btn btn-success btn-lg float-right" role="button">New Loan</a>
+
+<% if @success %>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Loan Number</th>
+      <th scope="col">Account Number</th>
+      <th scope="col">Bank</th>
+      <th scope="col">Ifsc Code</th>
+      <th scope="col">Credit</th>
+      <th scope="col">Emi</th>
+      <th scope="col">Term</th>
+      <th scope="col">status</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% @display_data.each_with_index do |data, i|%>
+	    <tr>
+	      <th scope="row"><%= i+1 %></th>
+	      <td><%= data[:name] %></td>
+	      <td><%= data[:email] %></td>
+	      <td><%= data[:loan_number] %></td>
+	      <td><%= data[:account_number] %></td>
+	      <td><%= data[:bank] %></td>
+	      <td><%= data[:ifsc] %></td>
+	      <td><%= data[:credit] %></td>
+	      <td><%= data[:emi] %></td>
+	      <td><%= data[:term] %></td>
+	      <td><%= data[:status] %></td>
+	    </tr>
+    <% end %>
+  </tbody>
+</table>
+<% else %>
+	User not found
+<% end %>

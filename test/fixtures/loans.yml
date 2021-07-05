@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: MyString
+  account_detail_id: 1
+  credit_limit: 1.5
+  emi: 1.5
+  term: 
+
+two:
+  number: MyString
+  account_detail_id: 1
+  credit_limit: 1.5
+  emi: 1.5
+  term: 

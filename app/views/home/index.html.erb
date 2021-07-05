@@ -1,0 +1,19 @@
+<%= form_with url: "/users/fetch", method: :get do |form| %>
+<div id="myModal" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      <div class="modal-body">
+		<div class="mb-3">
+		  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+		  <%= form.text_field :email %>
+		</div>
+      </div>
+      <div class="modal-footer">
+      	<%= form.submit "Search" %>
+        <!-- <button type="button" class="btn btn-primary">Submit</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
